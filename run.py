@@ -1,10 +1,11 @@
-from random import randint
+from random
+import randint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
     "https://www.googleapis.com/auth/drive"
-    ]
+]
 
 board = []
 
@@ -14,7 +15,7 @@ for x in range(6):
 
 def print_board(board):
     for row in board:
-        print((" ").join(row))
+    print((" ").join(row))
 
 
 print("Let's play Battleship!")
@@ -32,24 +33,22 @@ ship_row = random_row(board)
 ship_col = random_col(board)
 
 for turn in range(9):
-    print ("Turn"), turn
-    guess_row = int(input("Guess Row:"))
-    guess_col = int(
-        input("Guess Col:"))
+    print("Turn"), turn
+guess_row = int(input("Guess Row:"))
+guess_col = int(
+    input("Guess Col:"))
 
-    if guess_row == ship_row and guess_col == ship_col:
-        print("Congratulations! You sunk my battleship!")
-        break
-    else:
-        if (guess_row < 0 or guess_row > 5) or
-        (guess_col < 0 or guess_col > 5):
-            print("Oops, that's not even in the ocean.")
-        elif(board[guess_row][guess_col] == "X"):
-            print("You guessed that one already.")
-        else:
-            print("You missed my battleship!")
-            board[guess_row][guess_col] = "X"
-    if turn == 8:
-        print("Game Over")
-    turn = + 1
-
+if guess_row == ship_row and guess_col == ship_col:
+    print("Congratulations! You sunk my battleship!")
+break
+else :
+    if (guess_row < 0 or guess_row > 5) or(guess_col < 0 or guess_col > 5):
+        print("Oops, that's not even in the ocean.")
+elif(board[guess_row][guess_col] == "X"):
+    print("You guessed that one already.")
+else :
+    print("You missed my battleship!")
+board[guess_row][guess_col] = "X"
+if turn == 8:
+    print("Game Over")
+turn = +1
