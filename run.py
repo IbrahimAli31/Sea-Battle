@@ -22,11 +22,11 @@ print_board(board)
 
 
 def random_row(board):
-    return randint(0, len(board) - 1)  
+    return randint(0, len(board) - 1)
+
 
 def random_col(board):
     return randint(0, len(board[0]) - 1)
-
 
 ship_row = random_row(board)
 ship_col = random_col(board)
@@ -41,7 +41,8 @@ for turn in range(9):
         print("Congratulations! You sunk my battleship!")
         break
     else:
-        if (guess_row < 0 or guess_row > 5) or (guess_col < 0 or guess_col > 5):
+        if (guess_row < 0 or guess_row > 5) or
+        (guess_col < 0 or guess_col > 5):
             print("Oops, that's not even in the ocean.")
         elif(board[guess_row][guess_col] == "X"):
             print("You guessed that one already.")
@@ -50,4 +51,5 @@ for turn in range(9):
             board[guess_row][guess_col] = "X"
     if turn == 8:
         print("Game Over")
-    turn =+ 1
+    turn = + 1
+
