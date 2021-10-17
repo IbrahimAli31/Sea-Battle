@@ -1,31 +1,66 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Sea Battle 
 
-Welcome IbrahimAli31,
+Sea Battle otherwise known as Battleship is Python terminal based interactive game
+where the user attemps to sink a battleship by competing with a computer.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+[Please see the live version of the project](https://ocean-battle.herokuapp.com)
 
-## Reminders
+<img src="images/am-i-responsive.png">
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## How to Play 
 
-## Creating the Heroku app
+You can find the origins and rules to play the game through [Wikipidea.](https://en.wikipedia.org/wiki/Battleship_(game))
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+In this version of Sea Battle (Battleship) the player will be given 
+the option to choose a number for a Row and Column.They will enter 
+this number and be told if they have sunk the shape.This is a much simpler version
+of the original game.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Features 
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+### Existing Features
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- Random Selection 
+- The player is unaware of where the sink is 
 
-Connect your GitHub repository and deploy as normal.
+<img src="images/game-begin.png">
+  
+- Computer is played against
 
-## Constraints
+<img src="images/input-values.png">
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+- Input validation and error checking 
 
------
-Happy coding!
+ You are met with an error message if you enter numbers outside of the grid
+ You must enter a numerical value 
+
+ ### Future Features 
+
+ - Create ships on grid and allow user to orienate them
+ - Create live score board
+
+ ## Testing 
+
+<img src="images/python-validator.png">
+
+- Code was passed through the Pep8 Python validator and 
+reported no issues
+- Tested in my local terminal and the code institute Heroku terminal
+
+## Deployment 
+
+My project was deployed using Code Institue's mock terminal for Heroku 
+
+The following steps were taken to deploy this.
+
+1. Clone this Repository 
+2. Create Heroku App
+3. Adjust buildbacks to Python and NodeJS - specifically in this order.
+4. Bond the Heroku app to the respository 
+5. Click on Deploy.
+
+## Credits 
+
+- Wikipidiea for link for further information on the game.
+
+
