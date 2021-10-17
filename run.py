@@ -1,21 +1,32 @@
 from random import randint
 
+SCOPE = [
+    "https://www.googleapis.com/auth/spreadsheets",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/drive"
+    ]
+
 board = []
 
 for x in range(6):
     board.append(["O"] * 6)
 
+
 def print_board(board):
     for row in board:
         print((" ").join(row))
 
+
 print("Let's play Battleship!")
 print_board(board)
 
+
 def random_row(board):
-    return randint(0, len(board) - 1)
+    return randint(0, len(board) - 1)  
+
 def random_col(board):
     return randint(0, len(board[0]) - 1)
+
 
 ship_row = random_row(board)
 ship_col = random_col(board)
